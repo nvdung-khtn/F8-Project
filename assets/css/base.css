@@ -1,0 +1,37 @@
+/** Cấu hình chung */
+:root{
+    --white-color:#FFF;
+    --black-color:#000;
+    --text-color:#333;
+}
+
+/** Apply CSS lên tất cả các phần tử HTML đc nhúng file base.css */
+*{
+    box-sizing: inherit; /* Kế thừa từ thẻ cha chứa nó */
+
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem; /* Chiều cao của dòng*/
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid{
+    /** Với màn hình > 1200px => width = 1200px
+        Với màn hình < 1200px => width = 100% width màn hình đó */
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/** Sử dụng trong trường hợp không muốn width = 1200px*/
+.grid__full-width{
+    width: 100%;
+}
+
+.grip__row{
+    display: flex;
+    flex-wrap: wrap;
+}
