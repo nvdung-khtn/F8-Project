@@ -1,5 +1,7 @@
 /** Cấu hình chung */
 :root{
+    --primary-color:rgb(238, 77, 45);
+    --primary-color-rgba:rgba(230, 82, 52, 0.226);
     --white-color:#FFF;
     --black-color:#000;
     --text-color:#333;
