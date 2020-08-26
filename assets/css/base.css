@@ -83,6 +83,7 @@ html{
     outline: none;
     cursor: pointer;
     color: var(--text-color);
+    line-height: 1.6rem;
 }
 
 .btn.btn--size-s{

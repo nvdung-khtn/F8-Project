@@ -249,6 +249,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 12px 0 12px;
 }
 
 .auth-form__heading{
@@ -341,4 +342,21 @@
 .btn--with-icon{
     display: flex;
     align-items: center;
+}
+
+/** Login form */
+.auth-form__help{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__help-link{
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.3rem;
+    color: #939393;
+}
+
+.auth-form__help-forgot{
+    color: var(--primary-color);
 }
