@@ -16,11 +16,97 @@
     text-decoration: none;
     padding-left: 0;
     margin-top: 4px 0 0 0;
+    display: flex;
 }
 
 .header__navbar-item {
     margin: 0 8px;
     position: relative;
+    min-height: 26px;
+}
+
+/** Interface after login*/
+.header__navbar-item.header__navbar-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header__navbar-user:hover .header__navbar-user-menu{
+    display: block;
+}
+
+.header__navbar-user-img{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.header__navbar-user-name{
+    margin-left: 4px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.header__navbar-user-menu{
+    padding: 8px 0;
+    margin: 0;
+    list-style: none;
+    width: 160px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 4px);
+    z-index: 1;
+    box-shadow: 0 1px 3px #999;
+    cursor: default;
+    display: none;
+}
+
+.header__navbar-user-menu::before{
+    content: "";
+    position: absolute;
+    top: -31px;
+    right: 33px;
+    height: 10px;
+    border-style: solid;
+    border-width: 12px 18px;
+    border-color: transparent transparent var(--white-color) transparent;
+}
+
+/* Bắc cầu*/
+.header__navbar-user-menu::after{
+    content: "";
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top:-5%;
+}
+
+.header__navbar-user-item{
+    padding: 4px 8px;
+}
+
+.header__navbar-user-item a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 1.4rem;
+    display: inline;
+    padding: 8px 12px;
+}
+
+.header__navbar-user-item:hover{
+    background-color: rgb(241, 235, 235);
+}
+
+.header__navbar-user-item:hover a{
+    color: rgb(75, 202, 130);
 }
 
 .header__navbar-item,
@@ -120,6 +206,7 @@
     width: 404px;
     background-color: var(--white-color);
     border: 1px solid #D3D3D3;
+    border-radius: 3px;
     cursor: default; /* Note */
     animation: headerNotifyGrowth ease-in 0.3s;
     will-change: opacity, transform; /* Khai báo sự thay đổi vs brower*/
@@ -370,6 +457,12 @@
 .header__logo{
     width: 200px;
 }
+
+.header__logo-link{
+    text-decoration: none;
+    color: transparent;
+}
+
 .header__logo-img{
     width: 150px;
     color: var(--white-color);
