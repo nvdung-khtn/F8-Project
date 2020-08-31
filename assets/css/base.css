@@ -25,6 +25,7 @@ html{
     box-sizing: border-box;
 }
 
+/* Responsive */
 .grid{
     /** Với màn hình > 1200px => width = 1200px
         Với màn hình < 1200px => width = 100% width màn hình đó */
@@ -38,9 +39,23 @@ html{
     width: 100%;
 }
 
-.grip__row{
+.grid__row{
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.grid__column-2{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.667%;
+}
+
+.grid__column-10{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.334%;
 }
 
 /** Animation*/
@@ -122,4 +137,70 @@ html{
     /* filter: brightness(80%); */ /*Giảm độ sáng*/
     color: #949494;
     background-color: #c3c3c3;
+}
+
+/* Selection */
+.select-input{
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 3px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.select-input::before{
+    content: "";
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    display: block;
+}
+
+.select-input:hover .select-input__list{
+    display: block;
+}
+
+.select-input__list{
+    margin: 0;
+    padding: 8px 16px;
+    list-style: none;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 36px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px #CCC;
+    overflow: hidden;
+    display: none;
+}
+    
+.select-input__label{
+    font-size: 1.4rem;
+}
+
+.select-input__icon{
+    font-size: 1.4rem;
+    color: rgb(131,131,131);
+    position: relative;
+    top: 1px;
+}
+
+.select-input__item a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    display: block;
+    padding: 2px 0;
+}
+
+.select-input__item:hover a{
+    color: var(--primary-color);
+    display: block;
 }

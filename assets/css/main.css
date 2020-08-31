@@ -820,4 +820,139 @@
     background-color: #F05D41;
 }
 
+/** App container */
+.app__container{
+    background-color: #F5F5F5;
+}
+
+.app__content{
+    padding-top: 24px;
+}
+.category{
+    background-color: var(--white-color);
+    border-radius: 3px;
+}
+
+.category__heading{
+    margin-top: 0;
+    color: var(--text-color);
+    font-size: 1.7rem;
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.category__heading-icon{
+    font-size: 1.4rem;  
+    margin-right: 4px;
+}
+
+.category-list{
+    padding: 0 0 8px 0;
+    list-style: none;
+    margin-left: 12px;
+
+}
+
+.category-item--active .category-item__link{
+    color: var(--primary-color);
+}
+
+.category-item--active .category-item__link::before{
+    content: "";
+    border: 5px solid;
+    border-color: transparent transparent transparent var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+}
+
+.category-item__link{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    display: block;
+    padding: 4px 16px;
+    position: relative;
+    right: 0;
+    transition: right linear 0.1s; /* Định nghĩa khi chuyển động*/
+}
+
+.category-item__link:hover{
+    color: var(--primary-color);
+    right: -4px;
+}
+
+.home-filter{
+    background-color: rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+}
+
+.home-filter__btn{
+    min-width: 90px;
+    margin-right: 12px;
+    background-color: var(--white-color);
+}
+
+.home-filter__label{
+    font-size: 1.4rem;
+    color: #555;
+    margin-right: 16px;
+    display: flex;
+    padding: 0 8px;
+}
+
+.home-filter__page{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.home-filter__page-num{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-right: 22px;
+}
+
+.home-filter__page-current{
+    color: var(--primary-color);
+}
+
+.home-filter__page-control{
+    display: flex;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px #aaa;
+}
+
+.home-filter__page-btn{
+    height: 36px;
+    width: 36px;
+    display: block;
+    background-color: var(--white-color);
+    display: flex;
+    text-decoration: none;
+}
+
+.home-filter__page-btn:first-child{
+    border-right: 1px solid #EEE;
+}
+
+.home-filter__page-btn i{
+    margin: auto;
+}
+
+.home-filter__page-btn--disable{
+    background-color: #f9f9f9;
+    cursor: default;
+}
+
+.home-filter__page-btn--disable i{
+    color: #CCC;
+}
+
+
+
 
