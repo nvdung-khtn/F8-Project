@@ -737,6 +737,9 @@
 .header__cart-list-item{
     padding-left: 0;
     list-style: none;
+    height: 50vh;
+    overflow-y: auto;
+    z-index: 1;
 }
 
 .header__cart-item{
@@ -986,7 +989,7 @@
     padding-top: 100%;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
+    background-position: top center;
 }
 
 .home-product-item__name{
