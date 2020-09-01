@@ -186,7 +186,7 @@ html{
     box-shadow: 0 1px 3px #CCC;
     overflow: hidden;
     display: none;
-    z-index: 1;
+    z-index: 1; 
 }
     
 .select-input__label{
@@ -211,4 +211,42 @@ html{
 .select-input__item:hover a{
     color: var(--primary-color);
     display: block;
+}
+
+/** Pagination*/
+.pagination{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-item{
+    margin: 0 14px;
+}
+
+.pagination-item--active .pagination-item-link{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active .pagination-item-link:hover{
+    background-color: #ED5C3F;
+}
+
+.pagination-item-link{
+    --height: 30px;
+    color: #939393;
+    text-decoration: none;
+    font-size: 2rem;
+    height: var(--height);
+    min-width: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: var(--height);
+    border-radius: 3px;
+}
+
+.agination-item-icon{
+
 }

@@ -1158,6 +1158,12 @@ i.icon-liked{
     color: var(--white-color);
 }
 
+/** Home product pagination*/
+.home-product__pagination{
+    margin: 48px 0 32px;
+}
+
+
 
 
 
