@@ -1,4 +1,8 @@
 /** Cấu hình riêng */
+.app {
+    overflow: hidden;
+}
+
 .header{
     /* height: 120px; */
     height: var(--header-height);
@@ -458,6 +462,7 @@
 
 .header__mobie-search {
     padding: 0 6px;
+    display: none;
 }
 
 .header__mobie-search i {
@@ -666,6 +671,7 @@
     display: inline-block;
     padding: 2px 8px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header__cart-wrap:hover .header__cart-list{
@@ -1014,6 +1020,65 @@
     color: #CCC;
 }
 
+/* Mobile category */
+.mobie-category {
+    display: none;
+}
+
+.mobie-category__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    border-radius: 5px;
+}
+
+/* Bỏ thanh scrollbar khi có atrr overflow-x: auto*/
+.mobie-category__list::-webkit-scrollbar { 
+    display: none;
+}
+
+.mobie-category__item {
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.mobie-category__item:nth-of-type(3n+1) .mobie-category__link{
+    background-color: #87AFD8;
+}
+
+.mobie-category__item:nth-of-type(3n+2) .mobie-category__link{
+    background-color: #76C9BD;
+}
+
+.mobie-category__item:nth-of-type(3n+3) .mobie-category__link{
+    background-color: #88CF81;
+}
+
+.mobie-category__link {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    line-height: 2rem;
+    height: 4rem;
+    text-align: center;
+    display: block;
+    width: 110px;
+    border-radius: 4px;
+    font-weight: 300;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    padding: 0 6px;
+}
+
+
+
 /* Product item */
 .home-product{
     margin-bottom: 10px;
@@ -1210,6 +1275,7 @@ i.icon-liked{
 /** Home product pagination*/
 .home-product__pagination{
     margin: 48px 0 32px;
+    padding-left: 0;
 }
 
 /** Footer*/
@@ -1251,26 +1317,26 @@ i.icon-liked{
     margin: -2px 8px 0 0;
 }
 
-.footer__dowload{
+.footer__download{
     display: flex;
 }
 
-.footer__dowload-qr{
+.footer__download-qr{
     width: 80px;
     height: 80px;
     border: 1px solid var(--boder-color);
     margin-right: 16px;
 }
 
-.footer__dowload-apps{
+.footer__download-apps{
     flex: 1;
 }
 
-.footer__dowload-app-img{
+.footer__download-app-img{
     height: 20px;
 }
 
-.footer__dowload-app-link{
+.footer__download-app-link{
     text-decoration: none;
     color: transparent;
 }

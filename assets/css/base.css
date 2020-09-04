@@ -17,7 +17,6 @@
 /** Apply CSS lên tất cả các phần tử HTML đc nhúng file base.css */
 *{
     box-sizing: inherit; /* Kế thừa từ thẻ cha chứa nó */
-
 }
 
 html{
